@@ -3,10 +3,10 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .offerCard {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 180px;
   height: 300px;
   margin: 10px;
@@ -15,11 +15,11 @@
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .offerCard .productImage {
   width: 98%; /* pour remplir entièrement le conteneur */
   height: 75%; /* pour remplir entièrement le conteneur */
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
