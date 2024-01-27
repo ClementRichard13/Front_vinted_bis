@@ -3,22 +3,23 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  border: 1px solid blue;
 }
 .offerCard {
   border: 1px solid red;
   width: 180px;
-  height: 200px;
+  height: 300px;
+  margin: 10px;
 }
-.offerCard img {
+.offerCard .avatarImage {
   width: 40px;
   height: 40px;
   object-fit: cover;
+  border: 1px solid green;
 }
 
-/* Ce code code CSS ne sert à rien, il faut le modifier pour cibler les images du produit */
-.offerCard p img {
-  /* styles spécifiques pour les images à l'intérieur des éléments <p> dans .offerCard */
-  /* par exemple : */
-  width: 100%;
-  height: 360px;
+.offerCard .productImage {
+  width: 98%; /* pour remplir entièrement le conteneur */
+  height: 75%; /* pour remplir entièrement le conteneur */
+  border: 2px solid black;
 }

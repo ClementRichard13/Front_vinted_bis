@@ -30,23 +30,39 @@ const Home = () => {
   ) : (
     <main className="homePage">
       <div>
-        {data.map((offer) => (
-          <div key={offer._id} className="offerCard">
-            <Link to={`/offer/${offer._id}`}>
+        {data.map((offer) => {
+          return (
+            // <div key={offer._id} className="offerCard">
+            <Link
+              to={`/offer/${offer._id}`}
+              key={offer.id}
+              className="offerCard"
+            >
               <div>
                 {offer.owner.account.avatar && (
-                  <img src={offer.owner.account.avatar.secure_url} alt="" />
+                  <img
+                    className="avatarImage"
+                    src={offer.owner.account.avatar.secure_url}
+                    alt=""
+                  />
                 )}
                 <span>{offer.owner.account.username}</span>
               </div>
-              <img src={offer.product_image.secure_url} alt="" />
-              <p className="product">
+
+              <img
+                className="productImage"
+                src={offer.product_image.secure_url}
+                alt=""
+              />
+
+              <p>
                 {/* -- Le prix (variable de type Number) est transformé avec deux chiffre après la virgule, puis transformé en String (car 'replace' ne s'applique pas aux nombres), puis le point est transformé en virgule */}
                 {offer.product_price.toFixed(2).toString().replace(".", ",")} €
               </p>
             </Link>
-          </div>
-        ))}
+          );
+          // </div>
+        })}
       </div>
     </main>
   );
