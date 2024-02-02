@@ -19,7 +19,7 @@
 }
 
 .offerCard .productImage {
-  width: 98%; /* pour remplir entièrement le conteneur */
-  height: 75%; /* pour remplir entièrement le conteneur */
+  width: 98%;
+  height: 75%;
   /* border: 2px solid black; */
 }
