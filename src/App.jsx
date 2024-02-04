@@ -16,6 +16,8 @@ import Signup from "./pages/SignupPage/Signup";
 
 import Login from "./pages/LoginPage/Login";
 
+import Publish from "./pages/PublishPage/publish";
+
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
 
@@ -32,10 +34,11 @@ function App() {
     <Router>
       <Header handleToken={handleToken} userToken={userToken} />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/offer/:id" element={<Offer />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/offer/:id" element={<Offer />} />
         <Route path="/signup" element={<Signup handleToken={handleToken} />} />
         <Route path="/login" element={<Login handleToken={handleToken} />} />
+        <Route path="/publish" element={<Publish userToken={userToken} />} />
       </Routes>
     </Router>
   );
