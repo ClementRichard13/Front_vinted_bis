@@ -35,7 +35,7 @@ const Home = () => {
             // <div key={offer._id} className="offerCard">
             <Link
               to={`/offer/${offer._id}`}
-              key={offer.id}
+              key={offer._id}
               className="offerCard"
             >
               <div>
